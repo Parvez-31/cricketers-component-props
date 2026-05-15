@@ -1,4 +1,5 @@
-export const cricketers = [
+import type { Cricketers } from "../../typescript/interface/cricketers.interface";
+export const cricketers: Cricketers[] = [
   {
     id: "C101",
     name: "Virat Kohli",
