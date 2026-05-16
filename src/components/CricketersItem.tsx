@@ -1,9 +1,7 @@
-import type { Cricketers } from "../typescript/interface/cricketers.interface";
 import ReviewsItem from "./ReviewsItem";
 import SubStatsItem from "./SubStatsItem";
-type CricketersItemProps = {
-  item: Cricketers;
-};
+import type { CricketersItemProps } from "../typescript/type/cricketers.props.type";
+
 const CricketersItem = ({ item }: CricketersItemProps) => {
   return (
     <>

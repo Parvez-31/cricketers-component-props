@@ -1,7 +1,4 @@
-import type { SubStats } from "../typescript/interface/cricketers.interface";
-type SubStatsProps = {
-  stats: SubStats;
-};
+import type { SubStatsProps } from "../typescript/type/cricketers.props.type";
 const SubStatsItem = ({ stats }: SubStatsProps) => {
   return (
     <>
