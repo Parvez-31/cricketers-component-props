@@ -1,4 +1,5 @@
 import type { Cricketers } from "../typescript/interface/cricketers.interface";
+import ReviewsItem from "./ReviewsItem";
 import SubStatsItem from "./SubStatsItem";
 type CricketersItemProps = {
   item: Cricketers;
@@ -50,14 +51,7 @@ const CricketersItem = ({ item }: CricketersItemProps) => {
 
         <section>
           {item.reviews.map((review) => {
-            return (
-              <div key={review.id}>
-                <p>{review.fanName}</p>
-                <p>{review.rating}</p>
-                <p>{review.comment}</p>
-                <p>{review.createdAt}</p>
-              </div>
-            );
+            return <ReviewsItem key={review.id} review={review} />;
           })}
         </section>
       </section>
