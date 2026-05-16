@@ -1,4 +1,5 @@
 import type { Cricketers } from "../typescript/interface/cricketers.interface";
+import SubStatsItem from "./SubStatsItem";
 type CricketersItemProps = {
   item: Cricketers;
 };
@@ -41,16 +42,7 @@ const CricketersItem = ({ item }: CricketersItemProps) => {
 
         <section>
           {item.subStats.map((stats) => {
-            return (
-              <div key={stats.id}>
-                <p>{stats.format}</p>
-                <p>{stats.matches}</p>
-                <p>{stats.runs}</p>
-                <p>{stats.average}</p>
-                <p>{stats?.centuries}</p>
-                <p>{stats?.wickets}</p>
-              </div>
-            );
+            return <SubStatsItem key={stats.id} stats={stats} />;
           })}
         </section>
 
